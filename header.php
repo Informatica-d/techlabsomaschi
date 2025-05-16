@@ -59,3 +59,12 @@
 
     </div>
 </header>
+  
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,    // durata dell'animazione
+      once: false,       // permette di ri-animare quando risali
+      mirror: true       // permette di nascondere l'elemento quando risali
+    });
+  </script>
