@@ -12,16 +12,16 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "JetBrains Mono", monospace;
-  --heading-font: "JetBrains Mono Bold", monospace;
-  --nav-font: "JetBrains Mono Regular",  monospace;
-      
+  --default-font: "Josefin Sans", sans-serif;
+  --heading-font: "Josefin Sans", sans-serif;
+  --nav-font: "Josefin Sans", sans-serif;
 
 }
 
+
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #000000; /* Background color for the entire website, including individual sections */
+  --background-color: #585858; /* Background color for the entire website, including individual sections */
   --default-color: #ffffff; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #ec7f39; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #33bde3; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -58,6 +58,8 @@
 :root {
   scroll-behavior: smooth;
 }
+
+/*--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
@@ -326,7 +328,7 @@ h6 {
   .navmenu a,
   .navmenu a:focus {
     color: color-mix(in srgb, var(--nav-color), transparent 30%);
-    font-size: 15px;
+    font-size: 17px;
     padding: 0 3px;
     font-family: var(--nav-font);
     font-weight: 400;
@@ -616,6 +618,13 @@ h6 {
   padding-top: 5px;
 }
 
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -728,7 +737,7 @@ h6 {
   justify-content: center;
   padding: 0;
   margin: 0;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -794,6 +803,7 @@ section,
 .section-title p {
   margin-bottom: 0;
   color: color-mix(in srgb, var(--default-color) 90%, white 50%);
+  font-size: 20px;
 }
 
 /*--------------------------------------------------------------
@@ -841,7 +851,7 @@ section,
 .hero p {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin: 10px 0 20px 0;
-  font-size: 24px;
+  font-size: 30px;
 }
 
 @media (max-width: 768px) {
@@ -859,6 +869,11 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+.about p {
+  font-size: 20px;
+  line-height: 28px;
+}
+
 .about ul {
   list-style: none;
   padding: 0;
@@ -881,7 +896,7 @@ section,
   color: var(--contrast-color);
   font-family: var(--heading-font);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 20px;
   letter-spacing: 1px;
   padding: 10px 28px;
   border-radius: 50px;
@@ -944,7 +959,7 @@ section,
 .services .service-item p {
   color: var(--background-color);
   line-height: 24px;
-  font-size: 14px;
+  font-size: 20px;
   margin-bottom: 0;
 }
 
@@ -1004,6 +1019,7 @@ section,
 
 .call-to-action p {
   color: var(--default-color);
+  font-size: 20px;
 }
 
 .call-to-action .cta-btn {
@@ -1056,7 +1072,7 @@ section,
 }
 
 .features .features-item p {
-  font-size: 15px;
+  font-size: 20px;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin: 0;
 }
@@ -1064,6 +1080,9 @@ section,
 /*--------------------------------------------------------------
 # Clients Section
 --------------------------------------------------------------*/
+.clients-wrap {
+    margin: 15px;
+}
 .clients .clients-wrap {
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
   border-left: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
@@ -1151,7 +1170,7 @@ section,
   padding: 0;
   margin: 0;
   font-family: var(--heading-font);
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
@@ -1257,264 +1276,6 @@ section,
   bottom: 0;
 }
 
-/*--------------------------------------------------------------
-# Pricing Section
---------------------------------------------------------------*/
-.pricing .pricing-item {
-  background-color: var(--surface-color);
-  box-shadow: 0px 5px 90px rgba(0, 0, 0, 0.1);
-  padding: 40px 20px;
-  text-align: center;
-  border-radius: 8px;
-  position: relative;
-  overflow: hidden;
-}
-
-.pricing .pricing-item h3 {
-  padding: 15px;
-  margin-top: 15px;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.pricing .pricing-item h4 {
-  color: var(--accent-color);
-  font-size: 42px;
-  font-family: var(--default-font);
-  font-weight: 500;
-}
-
-.pricing .pricing-item h4 sup {
-  font-size: 20px;
-  top: -15px;
-  left: -3px;
-}
-
-.pricing .pricing-item h4 span {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  font-size: 16px;
-  font-weight: 300;
-}
-
-.pricing .pricing-item ul {
-  padding: 20px 0;
-  list-style: none;
-  text-align: center;
-  line-height: 20px;
-  font-size: 14px;
-}
-
-.pricing .pricing-item ul li {
-  padding-bottom: 16px;
-}
-
-.pricing .pricing-item ul .na {
-  color: color-mix(in srgb, var(--default-color), transparent 60%);
-  text-decoration: line-through;
-}
-
-.pricing .pricing-item .btn-wrap {
-  padding: 15px;
-  text-align: center;
-}
-
-.pricing .pricing-item .btn-buy {
-  color: var(--accent-color);
-  background-color: transparent;
-  border: 2px solid var(--accent-color);
-  display: inline-block;
-  padding: 10px 40px 12px 40px;
-  border-radius: 50px;
-  font-size: 14px;
-  font-family: var(--heading-font);
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.pricing .pricing-item .btn-buy:hover {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.pricing .recommended .btn-buy {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.pricing .recommended .btn-buy:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
-  border-color: color-mix(in srgb, var(--accent-color), transparent 20%);
-}
-
-.pricing .recommended-badge {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  font-size: 13px;
-  padding: 3px 25px 6px 25px;
-  background: color-mix(in srgb, var(--accent-color), transparent 92%);
-  color: var(--accent-color);
-  border-radius: 50px;
-}
-
-/*--------------------------------------------------------------
-# Faq Section
---------------------------------------------------------------*/
-.faq .content h3 {
-  font-weight: 400;
-  font-size: 34px;
-}
-
-.faq .content p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-}
-
-.faq .faq-container {
-  margin-top: 15px;
-}
-
-.faq .faq-container .faq-item {
-  background-color: var(--surface-color);
-  position: relative;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-.faq .faq-container .faq-item:last-child {
-  margin-bottom: 0;
-}
-
-.faq .faq-container .faq-item h3 {
-  font-weight: 600;
-  font-size: 17px;
-  line-height: 24px;
-  margin: 0 30px 0 32px;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.faq .faq-container .faq-item h3 span {
-  color: var(--accent-color);
-  padding-right: 5px;
-}
-
-.faq .faq-container .faq-item h3:hover {
-  color: var(--accent-color);
-}
-
-.faq .faq-container .faq-item .faq-content {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: 0.3s ease-in-out;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.faq .faq-container .faq-item .faq-content p {
-  margin-bottom: 0;
-  overflow: hidden;
-}
-
-.faq .faq-container .faq-item .faq-icon {
-  position: absolute;
-  top: 22px;
-  left: 20px;
-  font-size: 22px;
-  line-height: 0;
-  transition: 0.3s;
-  color: var(--accent-color);
-}
-
-.faq .faq-container .faq-item .faq-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 16px;
-  line-height: 0;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.faq .faq-container .faq-item .faq-toggle:hover {
-  color: var(--accent-color);
-}
-
-.faq .faq-container .faq-active h3 {
-  color: var(--accent-color);
-}
-
-.faq .faq-container .faq-active .faq-content {
-  grid-template-rows: 1fr;
-  visibility: visible;
-  opacity: 1;
-  padding-top: 10px;
-}
-
-.faq .faq-container .faq-active .faq-toggle {
-  transform: rotate(90deg);
-  color: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
-# Recent Posts Section
---------------------------------------------------------------*/
-.recent-posts article {
-  background: var(--surface-color);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  height: 100%;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.recent-posts .post-img {
-  max-height: 240px;
-  margin: -30px -30px 15px -30px;
-  overflow: hidden;
-}
-
-.recent-posts .post-category {
-  font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  margin-bottom: 10px;
-}
-
-.recent-posts .title {
-  font-size: 20px;
-  font-weight: 700;
-  padding: 0;
-  margin: 0 0 20px 0;
-}
-
-.recent-posts .title a {
-  color: var(--heading-color);
-  transition: 0.3s;
-}
-
-.recent-posts .title a:hover {
-  color: var(--accent-color);
-}
-
-.recent-posts .post-author-img {
-  width: 50px;
-  border-radius: 50%;
-  margin-right: 15px;
-}
-
-.recent-posts .post-author {
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-.recent-posts .post-date {
-  font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  margin-bottom: 0;
-}
 
 /*--------------------------------------------------------------
 # Contact Section
@@ -2438,4 +2199,171 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+
+
+/* From Uiverse.io by SelfMadeSystem */ 
+/*
+More comprehensive version at shenanigans.shoghisimon.ca/collection/css-rain-bg/
+ */
+
+.matrix {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  background-image: radial-gradient(4px 100px at 0px 235px, #0f0, #0000),
+    radial-gradient(4px 100px at 300px 235px, #0f0, #0000),
+    radial-gradient(1.5px 1.5px at 150px 117.5px, #0f0 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 252px, #0f0, #0000),
+    radial-gradient(4px 100px at 300px 252px, #0f0, #0000),
+    radial-gradient(1.5px 1.5px at 150px 126px, #0f0 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 150px, #0f0, #0000),
+    radial-gradient(4px 100px at 300px 150px, #0f0, #0000),
+    radial-gradient(1.5px 1.5px at 150px 75px, #0f0 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 253px, #0f0, #0000),
+    radial-gradient(4px 100px at 300px 253px, #0f0, #0000),
+    radial-gradient(1.5px 1.5px at 150px 126.5px, #0f0 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 204px, #0f0, #0000),
+    radial-gradient(4px 100px at 300px 204px, #0f0, #0000),
+    radial-gradient(1.5px 1.5px at 150px 102px, #0f0 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 134px, #0f0, #0000),
+    radial-gradient(4px 100px at 300px 134px, #0f0, #0000),
+    radial-gradient(1.5px 1.5px at 150px 67px, #0f0 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 179px, #0f0, #0000),
+    radial-gradient(4px 100px at 300px 179px, #0f0, #0000),
+    radial-gradient(1.5px 1.5px at 150px 89.5px, #0f0 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 299px, #0f0, #0000),
+    radial-gradient(4px 100px at 300px 299px, #0f0, #0000),
+    radial-gradient(1.5px 1.5px at 150px 149.5px, #0f0 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 215px, #0f0, #0000),
+    radial-gradient(4px 100px at 300px 215px, #0f0, #0000),
+    radial-gradient(1.5px 1.5px at 150px 107.5px, #0f0 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 281px, #0f0, #0000),
+    radial-gradient(4px 100px at 300px 281px, #0f0, #0000),
+    radial-gradient(1.5px 1.5px at 150px 140.5px, #0f0 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 158px, #0f0, #0000),
+    radial-gradient(4px 100px at 300px 158px, #0f0, #0000),
+    radial-gradient(1.5px 1.5px at 150px 79px, #0f0 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 210px, #0f0, #0000),
+    radial-gradient(4px 100px at 300px 210px, #0f0, #0000),
+    radial-gradient(1.5px 1.5px at 150px 105px, #0f0 100%, #0000 150%);
+  background-size:
+    300px 235px,
+    300px 235px,
+    300px 235px,
+    300px 252px,
+    300px 252px,
+    300px 252px,
+    300px 150px,
+    300px 150px,
+    300px 150px,
+    300px 253px,
+    300px 253px,
+    300px 253px,
+    300px 204px,
+    300px 204px,
+    300px 204px,
+    300px 134px,
+    300px 134px,
+    300px 134px,
+    300px 179px,
+    300px 179px,
+    300px 179px,
+    300px 299px,
+    300px 299px,
+    300px 299px,
+    300px 215px,
+    300px 215px,
+    300px 215px,
+    300px 281px,
+    300px 281px,
+    300px 281px,
+    300px 158px,
+    300px 158px,
+    300px 158px,
+    300px 210px,
+    300px 210px,
+    300px 210px;
+  animation: hi 150s linear infinite;
+}
+
+@keyframes hi {
+  0% {
+    background-position:
+      0px 220px,
+      3px 220px,
+      151.5px 337.5px,
+      25px 24px,
+      28px 24px,
+      176.5px 150px,
+      50px 16px,
+      53px 16px,
+      201.5px 91px,
+      75px 224px,
+      78px 224px,
+      226.5px 350.5px,
+      100px 19px,
+      103px 19px,
+      251.5px 121px,
+      125px 120px,
+      128px 120px,
+      276.5px 187px,
+      150px 31px,
+      153px 31px,
+      301.5px 120.5px,
+      175px 235px,
+      178px 235px,
+      326.5px 384.5px,
+      200px 121px,
+      203px 121px,
+      351.5px 228.5px,
+      225px 224px,
+      228px 224px,
+      376.5px 364.5px,
+      250px 26px,
+      253px 26px,
+      401.5px 105px,
+      275px 75px,
+      278px 75px,
+      426.5px 180px;
+  }
+  to {
+    background-position:
+      0px 6800px,
+      3px 6800px,
+      151.5px 6917.5px,
+      25px 13632px,
+      28px 13632px,
+      176.5px 13758px,
+      50px 5416px,
+      53px 5416px,
+      201.5px 5491px,
+      75px 17175px,
+      78px 17175px,
+      226.5px 17301.5px,
+      100px 5119px,
+      103px 5119px,
+      251.5px 5221px,
+      125px 8428px,
+      128px 8428px,
+      276.5px 8495px,
+      150px 9876px,
+      153px 9876px,
+      301.5px 9965.5px,
+      175px 13391px,
+      178px 13391px,
+      326.5px 13540.5px,
+      200px 14741px,
+      203px 14741px,
+      351.5px 14848.5px,
+      225px 18770px,
+      228px 18770px,
+      376.5px 18910.5px,
+      250px 5082px,
+      253px 5082px,
+      401.5px 5161px,
+      275px 6375px,
+      278px 6375px,
+      426.5px 6480px;
+  }
 }
