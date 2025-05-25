@@ -33,16 +33,15 @@
   ======================================================== -->
 </head>
 
-<body class="index-page">
-
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.php" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
          <img id="logo" src="assets/img/lab/logo_v3_chiaro.png" alt="Logo" >
-
       </a>
+
+      
 
       <nav id="navmenu" class="navmenu">
         <ul>
