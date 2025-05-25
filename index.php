@@ -10,9 +10,6 @@
       <div class="container d-flex flex-column align-items-center text-center">
         <h2 data-aos="fade-up" data-aos-delay="100">Benvenuti al Corso Operatore Informatico</h2>
         <p data-aos="fade-up" data-aos-delay="200">Formazione per il tuo futuro</p>
-        <!--<div data-aos="fade-up" data-aos-delay="300">
-          <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
-        </div>-->
       </div>
 
     </section><!-- /Hero Section -->
@@ -181,11 +178,11 @@
     </section><!-- /Features Section -->
 
     <!-- Clients Section -->
-    <section id="clients" class="clients section">
+    <section id="clients" class="clients ">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row g-0 clients-wrap">
+        <div class="row g-0 ">
 
           <div class="col-md-4 client-logo">
             <img src="assets/img/lab/logo_v3_scuro.png" class="img-fluid" alt="">
