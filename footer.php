@@ -2,10 +2,12 @@
   <div class="container">
     <div class="row">
       <!-- Left Column -->
-      <div class="col-lg-4 col-md-6 center">
-        <img src="assets/img/lab/logo_v3_chiaro.png" style="height: 55px; width: 250px;" alt="Site Logo" class="img-fluid mb-3">
-        <p>CFP San Girolamo Emiliani - Somaschi</p>
-      </div>
+        <div class="col-lg-4 col-md-12 center">
+                <a href="index.php" >
+                    <img src="assets/img/lab/logo_v3_chiaro.png" alt="Logo" style="max-width: 200px; max-height: 70px; margin-bottom: 15px;">
+                </a>
+            <p>CFP San Girolamo Emiliani - Somaschi</p>
+        </div>
       <!-- Center Column -->
       <div class="col-lg-4 col-md-6 center">
         <div class="social-links d-flex mb-3">
