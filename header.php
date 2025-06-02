@@ -41,8 +41,6 @@
          <img id="logo" src="assets/img/lab/logo_v3_chiaro.png" alt="Logo" >
       </a>
 
-      
-
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.php" class="link">Home</a></li>
@@ -52,7 +50,6 @@
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
       <!--<a class="cta-btn" href="iscriviti.php">Iscriviti</a>-->
 
     </div>
@@ -65,3 +62,4 @@
       once: false,       // permette di ri-animare quando risali
     });
   </script>
+
